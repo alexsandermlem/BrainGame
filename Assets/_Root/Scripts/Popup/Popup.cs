@@ -1,7 +1,8 @@
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
-[RequireComponent(typeof(CanvasGroup), typeof(Canvas))]
+[RequireComponent(typeof(CanvasGroup), typeof(Canvas), typeof(GraphicRaycaster))]
 public class Popup : MonoBehaviour
 {
     public CanvasGroup CanvasGroup { get; set; }
