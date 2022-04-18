@@ -1,9 +1,36 @@
-using UnityEngine.SceneManagement;
-
 public class GameController : Singleton<GameController>
 {
-    public void OnClickBackButton()
+    public Level LevelCurrent;
+
+    private void Awake()
     {
-        SceneManager.LoadScene(Constant.HOME_SCENE);
+        PopupController.Instance.Show<GamePopup>();
+    }
+
+    private void Start()
+    {
+        LoadLevel();
+    }
+
+    public void LoadLevel()
+    {
+        if (LevelCurrent != null)
+        {
+            Destroy(LevelCurrent.gameObject);
+        }
+
+        var level = ConfigController.Level.GetLevel(Data.IndexLevelCurrent);
+        LevelCurrent = Instantiate(level, transform);
+    }
+
+    public void NextLevel()
+    {
+        Data.IndexLevelCurrent++;
+        LoadLevel();
+    }
+
+    public void ReplayLevel()
+    {
+        LoadLevel();
     }
 }

@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 11400000, guid: 0bcf3f81cc69da040936b8ac482bdeb8, type: 2}
+  level: {fileID: 11400000, guid: dec1037d4bb3c224a861ad310d95bf78, type: 2}
 --- !u!4 &378670011
 Transform:
   m_ObjectHideFlags: 0
@@ -610,6 +611,7 @@ MonoBehaviour:
   CanvasScaler: {fileID: 548945359}
   Camera: {fileID: 2033947340}
   Popups:
+  - {fileID: 4768234015002227606, guid: 14a23c219654c434788e6c8cc68c741e, type: 3}
   - {fileID: 9106431077208436078, guid: 9a11c182fa9914f43b10abfafb046640, type: 3}
   - {fileID: 4983370512143133269, guid: b1baefb4b2b88224dbde66eb595cd530, type: 3}
   - {fileID: 1703892111332370939, guid: 12b5ff257d94bf0488ecbfcccad3a6c8, type: 3}
@@ -743,7 +745,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BackgroundAudio: {fileID: 482149421}
   OnceAudio: {fileID: 99937862}
-  AudioClips: []
 --- !u!4 &1958396018
 Transform:
   m_ObjectHideFlags: 0
