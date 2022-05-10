@@ -17,4 +17,9 @@ public class GamePopup : Popup
     {
         GameController.Instance.NextLevel();
     }
+    
+    public void ShowHintPopup()
+    {
+        PopupController.Instance.Show<BuyHintPopup>();
+    }
 }
