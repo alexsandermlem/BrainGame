@@ -4,4 +4,9 @@ using UnityEngine;
 
 public class WinPopup : Popup
 {
+    public void TapContinue()
+    {
+        Hide();
+        GameController.Instance.NextLevel();
+    }
 }
