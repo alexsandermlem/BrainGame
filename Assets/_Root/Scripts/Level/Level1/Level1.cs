@@ -1,36 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Level1 : Level
 {
     public Folk Folk;
     public Pizza[] Pizzas;
     public Pizza PizzaPicked;
+    [NonSerialized] public bool IsWin;
 
     private void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (!IsWin)
         {
-            if (Folk.IsPicked)
+            if (Input.GetMouseButton(0))
             {
-                Folk.transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                foreach (var pizza in Pizzas)
+                if (Folk.IsPicked)
                 {
-                    if (pizza.IsPicked)
+                    Folk.transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    foreach (var pizza in Pizzas)
                     {
-                        pizza.transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition - new Vector3(100, 100, 0));
-                        PizzaPicked = pizza;
+                        if (pizza.IsPicked)
+                        {
+                            pizza.transform.position = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition - new Vector3(100, 100, 0));
+                            PizzaPicked = pizza;
+                        }
                     }
                 }
             }
-        }
 
-        if (Input.GetMouseButtonUp(0))
-        {
-            if (PizzaPicked == Pizzas[Pizzas.Length - 1])
+            if (Input.GetMouseButtonUp(0))
             {
-                PopupController.Instance.Show<WinPopup>();
+                if (PizzaPicked == Pizzas[Pizzas.Length - 1])
+                {
+                    IsWin = true;
+                    PopupController.Instance.Show<WinPopup>();
+                }
             }
         }
     }

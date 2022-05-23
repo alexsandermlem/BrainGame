@@ -13,9 +13,12 @@ public class Folk : MonoBehaviour
 
     private void OnMouseDown()
     {
-        FolkImage.sprite = FolkPickedSprite;
-        FolkImage.SetNativeSize();
-        IsPicked = true;
-        Collider.enabled = false;
+        if (PopupController.Instance.NumberActive <= 1)
+        {
+            FolkImage.sprite = FolkPickedSprite;
+            FolkImage.SetNativeSize();
+            IsPicked = true;
+            Collider.enabled = false;
+        }
     }
 }

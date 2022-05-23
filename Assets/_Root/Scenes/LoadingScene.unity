@@ -617,10 +617,12 @@ MonoBehaviour:
   Camera: {fileID: 2033947340}
   Popups:
   - {fileID: 4768234015002227606, guid: 14a23c219654c434788e6c8cc68c741e, type: 3}
-  - {fileID: 9106431077208436078, guid: 9a11c182fa9914f43b10abfafb046640, type: 3}
-  - {fileID: 4983370512143133269, guid: b1baefb4b2b88224dbde66eb595cd530, type: 3}
-  - {fileID: 1703892111332370939, guid: 12b5ff257d94bf0488ecbfcccad3a6c8, type: 3}
   - {fileID: 1058914650069839529, guid: 24839c29c171a4c5cae3305d9ea5f9bf, type: 3}
+  - {fileID: 3642295718838954352, guid: cb8ae3e4ff7f4d3489af837021645602, type: 3}
+  - {fileID: 1113023701789796396, guid: 637c5e6149f3582438e4abbb268735a3, type: 3}
+  - {fileID: 24026917527914819, guid: f75441c02a55e39409659c8fe885a8c6, type: 3}
+  - {fileID: 9106431077208436078, guid: 9a11c182fa9914f43b10abfafb046640, type: 3}
+  - {fileID: 1703892111332370939, guid: 12b5ff257d94bf0488ecbfcccad3a6c8, type: 3}
 --- !u!4 &1007334356
 Transform:
   m_ObjectHideFlags: 0

@@ -11,4 +11,9 @@ public class HomeController : Singleton<HomeController>
     {
         PopupController.Instance.Show<SettingPopup>();
     }
+
+    public void OnClickLevelButton()
+    {
+        PopupController.Instance.Show<LevelPopup>();
+    }
 }
