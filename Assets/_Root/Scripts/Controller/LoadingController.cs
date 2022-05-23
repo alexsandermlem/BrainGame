@@ -13,7 +13,7 @@ public class LoadingController : Singleton<LoadingController>
 
     private void Start()
     {
-        LoadingBar.DOFillAmount(1, 2).OnComplete(() =>
+        LoadingBar.DOFillAmount(1, 0).OnComplete(() =>
         {
             SceneManager.LoadScene(Constant.HOME_SCENE);
         });

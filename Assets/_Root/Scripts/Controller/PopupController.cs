@@ -10,6 +10,7 @@ public class PopupController : Singleton<PopupController>
     public CanvasScaler CanvasScaler;
     public Camera Camera;
     public Popup[] Popups;
+    public int NumberActive => dictionary.Count(pair => pair.Value.gameObject.activeSelf);
 
     private Dictionary<Type, Popup> dictionary = new Dictionary<Type, Popup>();
 
